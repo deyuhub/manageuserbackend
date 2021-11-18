@@ -1,0 +1,34 @@
+@url = http://localhost:3022
+
+###
+GET {{url}}
+Content-Type: "application/json"
+
+###
+
+DELETE {{url}}/deleteuser/6193b7a7717a2f8d4dc4a5ef
+Content-Type: "application/json"
+
+
+###
+
+
+POST  {{url}}/insertuser
+content-type: application/json
+     
+{
+    "user": {
+        "name": "jim Smith",
+        "username": "smith",
+        "email": "js@hotmail.com"
+     }
+}
+###
+PATCH  {{url}}/edituser/6193b7a7717a2f8d4dc4a5f0
+content-type: application/json
+     
+{
+ 
+     "email": "bk@hotmail.com"
+     
+}
