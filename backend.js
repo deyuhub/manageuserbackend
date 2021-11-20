@@ -5,12 +5,13 @@ import dotenv from 'dotenv';
 dotenv.config();
 const app = express();
 const port = process.env.PORT || 3016
+app.use(cors())
 const mongoConnectString = process.env.MONGODB_URI;
 // const mongoConnectString = "mongodb://localhost:27017";
 const client = new MongoClient(mongoConnectString);
 
 app.use(express.json());
-app.use(cors())
+
 
 const execMongo = async (done) => {
   await client.connect();
